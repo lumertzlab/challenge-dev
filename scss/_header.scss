@@ -82,12 +82,29 @@ header {
   }
   &.scroll-header {
     padding: 2rem 0;
-    background-color: $brand-white;
-    border-bottom: 1px solid #d4dce3;
+    background-color: $brand-dark-gray;
     box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.12);
     .container {
       .logo {
-        background-image: url("../assets/logo-black.svg");
+        background-image: url("../assets/logo-white.svg");
+      }
+    }
+    .navMenu {
+      ul {
+        li {
+          a {
+            color: $brand-white;
+          }
+        }
+      }
+    }
+    .btn-secondary {
+      border: 1px solid $brand-white;
+      color: $brand-white;
+      &:hover {
+        border: 1px solid $brand-white;
+        background-color: $brand-white;
+        color: $brand-dark-gray;
       }
     }
   }

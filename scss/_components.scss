@@ -1,0 +1,148 @@
+.accordion-item {
+  background-color: $brand-light-gray;
+  border: 1px solid $brand-dark-gray;
+  border-bottom: 5px solid $brand-dark-gray;
+  border-radius: 4.5rem;
+  color: #111;
+  margin-top: 3rem;
+  padding: 4.1rem 6rem;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+  &.active {
+    background-color: $brand-blue;
+    .accordion-item-header {
+      &::after {
+        content: "\2212";
+        background-color: $brand-light-gray;
+      }
+    }
+  }
+  .accordion-item-header {
+    position: relative;
+    font-weight: bold;
+    @include flex(row, center, space-between);
+    &::after {
+      content: "\002B";
+      @include flex(row, center, center);
+      height: 58px;
+      width: 58px;
+      font-size: 6rem;
+      font-weight: 500;
+      line-height: 0;
+      border-radius: 50rem;
+      border: 1px solid #000000;
+    }
+  }
+  .accordion-item-header-content {
+    @include flex(row, center, center);
+    span {
+      font-size: 6rem;
+      font-weight: 500;
+      margin-right: 2.5rem;
+    }
+    span,
+    h3 {
+      color: $brand-black;
+    }
+  }
+  .accordion-item-body {
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s linear;
+  }
+  .accordion-item-body-content {
+    .separation {
+      width: 100%;
+      height: 0.1rem;
+      background-color: $brand-black;
+      margin: 3rem 0;
+    }
+  }
+}
+
+.card-user {
+  width: 100%;
+  max-width: 38.7rem;
+  height: 100%;
+  background-color: $brand-white;
+  border: 0.1rem solid #191a23;
+  border-bottom: 0.5rem solid #191a23;
+  border-radius: 4.5rem;
+  padding: 4rem 3.5rem;
+  .user {
+    @include flex(row, flex-end, flex-start);
+    .user-profile {
+      width: 10.2rem;
+      height: 10.2rem;
+      margin-right: 2rem;
+    }
+    .user-infos {
+      @include flex(column, flex-end, space-between);
+      width: 100%;
+      height: 102px;
+      img {
+        width: 3.4rem;
+        height: 3.4rem;
+      }
+      .text-info {
+        width: 100%;
+      }
+    }
+  }
+  .separation {
+    height: 1px;
+    width: 100%;
+    background-color: #000000;
+    margin: 28px 0;
+  }
+  p {
+    color: $brand-black;
+  }
+  @include responsive(480px) {
+    height: 25.3rem;
+  }
+}
+
+.splash-screen {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: $brand-blue;
+  animation: lift 0.8s ease-in-out;
+  animation-delay: 1.6s;
+  animation-fill-mode: forwards;
+  z-index: 99999;
+  .splash-screen__secondary {
+    @include flex(row, center, center);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: $brand-dark-gray;
+    animation: lift 0.8s ease-in-out;
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+    img {
+      width: 11.5rem;
+    }
+  }
+  @keyframes lift {
+    0% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      transform: translate3d(-100%, 0, 0);
+      opacity: 1;
+      visibility: hidden;
+    }
+  }
+  @include responsive(767px) {
+    .splash-screen__secondary {
+      img {
+        width: 200px;
+      }
+    }
+  }
+}

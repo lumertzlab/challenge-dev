@@ -1,0 +1,153 @@
+footer {
+  margin-top: 15.4rem;
+  .container {
+    background-color: $brand-dark-gray;
+    border-radius: 4.5rem 4.5rem 0 0;
+    padding: 5.5rem 6rem 5rem 6rem;
+  }
+  .top {
+    @include flex(row, center, space-between);
+    max-width: 93.6rem;
+    width: 100%;
+    margin-bottom: 6.6rem;
+    .logo {
+      width: 6.6rem;
+    }
+    .top-nav {
+      max-width: 43rem;
+      width: 100%;
+      ul {
+        @include flex(row, center, space-between);
+        li {
+          margin-right: 4rem;
+          &:last-of-type {
+            margin-right: 0;
+          }
+          a {
+            color: $brand-white;
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .share {
+      ul {
+        @include flex(row, center, space-between);
+        li {
+          margin-right: 2rem;
+          &:last-of-type {
+            margin-right: 0;
+          }
+          img {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+      }
+    }
+  }
+  .main {
+    border-bottom: 0.1rem solid $brand-white;
+    margin-bottom: 5rem;
+    @include flex(row, flex-start, space-between);
+    .item {
+      strong {
+        color: #fff;
+        font-size: 1.6rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        line-height: 125%;
+        display: inline-block;
+        margin-bottom: 2.5rem;
+      }
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-bottom: 2.9rem;
+          }
+          a {
+            color: #fff;
+            font-size: 1.4rem;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+  .msg {
+    display: flex;
+    align-items: flex-start;
+    p {
+      width: auto;
+      color: $brand-white;
+      line-height: 2.8rem;
+      &:last-of-type {
+        margin-left: 4rem;
+        text-decoration: underline;
+      }
+    }
+  }
+  @include responsive(1050px) {
+    .main {
+      nav {
+        max-width: 76rem;
+      }
+    }
+  }
+  @include responsive(991px) {
+    .main {
+      width: 100%;
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 3.6rem;
+      nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .item {
+          width: 33%;
+          margin-bottom: 5rem;
+        }
+      }
+    }
+    .msg {
+      p {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 1rem;
+      }
+    }
+  }
+  @include responsive(600px) {
+    .main {
+      margin-bottom: 3rem;
+    }
+  }
+  @include responsive(480px) {
+    .top {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 4.3rem;
+      margin-bottom: 5.2rem;
+      .share {
+        flex-direction: column;
+        margin-top: 3.2rem;
+        ul {
+          margin-left: 0;
+          margin-top: 2rem;
+        }
+      }
+    }
+    .main {
+      nav {
+        .item {
+          width: 50%;
+          margin-bottom: 5.3rem;
+        }
+      }
+    }
+  }
+}
