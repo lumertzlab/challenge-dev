@@ -1,0 +1,30 @@
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 2rem 3.5rem;
+  border-radius: 1.4rem;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background-color: $brand-dark-gray;
+  border: 1px solid $brand-dark-gray;
+  color: $brand-white;
+  &:hover {
+    background-color: transparent;
+    color: $brand-dark-gray;
+  }
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid $brand-dark-gray;
+  color: $brand-black;
+  &:hover {
+    background-color: $brand-dark-gray;
+    color: $brand-white;
+  }
+}
