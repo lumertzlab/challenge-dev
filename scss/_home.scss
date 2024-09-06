@@ -202,7 +202,7 @@
   .text {
     width: 100%;
     h2 {
-      color: $gray-600;
+      color: $brand-black;
       margin-bottom: 1.7rem;
       padding: 0 0.7rem;
       background-color: $brand-blue;
@@ -258,7 +258,7 @@
   .text {
     width: 100%;
     h2 {
-      color: $gray-600;
+      color: $brand-black;
       margin-bottom: 1.7rem;
       padding: 0 0.7rem;
       background-color: $brand-blue;
@@ -360,6 +360,92 @@
     }
     .slide-depoimentos {
       padding: 0 2rem;
+    }
+  }
+}
+
+.s-form {
+  background-color: #1f242d;
+  .container {
+    @include flex(column, center, center);
+  }
+  .text {
+    width: 100%;
+    h2 {
+      color: $brand-black;
+      margin-bottom: 1.7rem;
+      padding: 0 0.7rem;
+      background-color: $brand-blue;
+      width: fit-content;
+      border-radius: 0.7rem;
+    }
+    p {
+      color: $brand-black;
+    }
+  }
+  form {
+    margin-top: 5.3rem;
+    width: 600px;
+    text-align: center;
+    .input-box {
+      display: flex;
+      justify-content: space-between;
+      .input-field {
+        width: 48.5%;
+      }
+    }
+    .textarea-field {
+      .error-txt {
+        margin-top: -10px;
+      }
+    }
+    .field {
+      .item {
+        width: 100%;
+        padding: 18px;
+        background: transparent;
+        border: 2px solid #0ef;
+        outline: none;
+        border-radius: 6px;
+        font-size: 16px;
+        color: #ededed;
+        margin: 12px 0;
+        resize: none;
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.3);
+        }
+      }
+      .error-txt {
+        font-size: 14.5px;
+        color: #d93025;
+        text-align: left;
+        margin: -5px 0 10px;
+        display: none;
+      }
+    }
+    .field.error .item {
+      border-color: #d93025;
+    }
+    .field.error .error-txt {
+      display: block;
+    }
+    button {
+      padding: 12px 32px;
+      background-color: #0ef;
+      border: none;
+      outline: none;
+      border-radius: 6px;
+      box-shadow: 0 0 10px #0ef;
+      font-size: 16px;
+      color: #333;
+      letter-spacing: 1px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.5s;
+      &:hover {
+        box-shadow: none;
+      }
     }
   }
 }

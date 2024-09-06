@@ -14,8 +14,8 @@ header {
     .logo {
       background-image: url("../assets/logo-black.svg");
       background-size: cover;
-      width: 66px;
-      height: 50px;
+      width: 6.6rem;
+      height: 4.8rem;
     }
   }
   .navTrigger {
@@ -49,10 +49,10 @@ header {
           opacity: 0;
         }
         &:nth-child(2) {
-          transform: translateY(1px) rotate(45deg);
+          transform: translateY(0.1rem) rotate(45deg);
         }
         &:nth-child(3) {
-          transform: translateY(-7px) rotate(-45deg);
+          transform: translateY(-0.7rem) rotate(-45deg);
         }
       }
     }
@@ -99,10 +99,10 @@ header {
       }
     }
     .btn-secondary {
-      border: 1px solid $brand-white;
+      border: 0.1rem solid $brand-white;
       color: $brand-white;
       &:hover {
-        border: 1px solid $brand-white;
+        border: 0.1rem solid $brand-white;
         background-color: $brand-white;
         color: $brand-dark-gray;
       }
@@ -136,7 +136,7 @@ header {
       ul {
         width: 100%;
         background-color: $brand-white;
-        border: 1px solid $gray-100;
+        border: 0.1rem solid $gray-100;
         padding: 1rem;
         list-style: none;
         border-radius: 0.7rem;
@@ -165,7 +165,7 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid $gray-100;
+            border: 0.1rem solid $gray-100;
             border-radius: 0.4rem;
             &:hover {
               background-color: #efefef;
@@ -187,8 +187,8 @@ header {
     .container,
     .home-container {
       .logo {
-        width: 137px;
-        height: 25px;
+        width: 13.7rem;
+        height: 2.5rem;
       }
     }
   }
