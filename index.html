@@ -17,7 +17,7 @@
 <body>
     <div class="splash-screen">
         <div class="splash-screen__secondary">
-            <img src="assets/logo-white.svg" alt="">
+            <img src="assets/logo-white.svg" alt="Logo +A Educação">
         </div>
     </div>
 
@@ -310,37 +310,36 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
 
-            <div>
+            <div class="contact">
                 <form action="#">
                     <div class="input-box">
                         <div class="input-field field">
-                            <input type="text" placeholder="Full name" id="name" class="item" autocomplete="off">
+                            <p>Name</p>
+                            <input type="text" placeholder="Name" id="name" class="item" autocomplete="off">
                             <div class="error-txt">Full Name can't be blank</div>
                         </div>
                         <div class="input-field field">
-                            <input type="text" placeholder="Email Address" id="email" class="item" autocomplete="off">
+                            <p>Email*</p>
+                            <input type="text" placeholder="Email" id="email" class="item" autocomplete="off">
                             <div class="error-txt email">Email Address can't be blank</div>
                         </div>
                     </div>
 
-                    <div class="input-box">
-                        <div class="input-field field">
-                            <input type="text" placeholder="Phone Number" id="phone" class="item" autocomplete="off">
-                            <div class="error-txt">Phone Number can't be blank</div>
-                        </div>
-                        <div class="input-field field">
-                            <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
-                            <div class="error-txt">Subject can't be blank</div>
-                        </div>
-                    </div>
-
                     <div class="textarea-field field">
-                        <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off"></textarea>
+                        <p>Message*</p>
+                        <textarea name="" id="message" cols="30" rows="10" placeholder="Message" class="item message" autocomplete="off"></textarea>
                         <div class="error-txt">Message can't be blank</div>
                     </div>
 
-                    <button type="submit">Send Message</button>
+                    <button class="btn-primary" type="submit">Send Message</button>
                 </form>
+                <div class="area-image">
+                    <div class="image" data-aos="zoom-in">
+                        <img src="assets/illustration-lines.svg" class="lines" alt="">
+                        <img src="assets/illustration-stars-01.svg" class="star-a" alt="">
+                        <img src="assets/illustration-stars-02.svg" class="star-b" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </section>

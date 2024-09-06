@@ -365,7 +365,7 @@
 }
 
 .s-form {
-  background-color: #1f242d;
+  margin-top: 8.6rem;
   .container {
     @include flex(column, center, center);
   }
@@ -383,68 +383,111 @@
       color: $brand-black;
     }
   }
-  form {
+  .contact {
+    @include flex(row, flex-start, space-between);
     margin-top: 5.3rem;
-    width: 600px;
-    text-align: center;
-    .input-box {
-      display: flex;
-      justify-content: space-between;
-      .input-field {
-        width: 48.5%;
-      }
-    }
-    .textarea-field {
-      .error-txt {
-        margin-top: -10px;
-      }
-    }
-    .field {
-      .item {
-        width: 100%;
-        padding: 18px;
-        background: transparent;
-        border: 2px solid #0ef;
-        outline: none;
-        border-radius: 6px;
-        font-size: 16px;
-        color: #ededed;
-        margin: 12px 0;
-        resize: none;
-        &::placeholder {
-          color: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: $brand-light-gray;
+    border-radius: 4.5rem;
+    padding: 6rem 10rem 8rem;
+    form {
+      max-width: 55.6rem;
+      width: 100%;
+      text-align: center;
+      .input-box {
+        @include flex(column, center, center);
+        .input-field {
+          width: 100%;
         }
       }
-      .error-txt {
-        font-size: 14.5px;
-        color: #d93025;
-        text-align: left;
-        margin: -5px 0 10px;
-        display: none;
+      .field {
+        .item {
+          width: 100%;
+          height: 5.9rem;
+          padding: 18px 30px;
+          background: $brand-white;
+          border: 1px solid $brand-black;
+          outline: none;
+          border-radius: 1.4rem;
+          font-size: 1.8rem;
+          line-height: normal;
+          color: $brand-black;
+          margin-bottom: 2.5rem;
+          resize: none;
+          &::placeholder {
+            color: #898989;
+          }
+          &.message {
+            height: 19rem;
+            margin-bottom: 4rem;
+          }
+        }
+        p {
+          font-size: 1.6rem;
+          line-height: 2.8rem;
+          width: fit-content;
+          margin-bottom: 0.5rem;
+          color: $brand-black;
+        }
+        .error-txt {
+          font-size: 1.45rem;
+          color: #d93025;
+          text-align: left;
+          margin: -2rem 0 1rem;
+          display: none;
+        }
+        &.error {
+          .item {
+            border-color: #d93025;
+          }
+          .error-txt {
+            display: block;
+          }
+        }
+      }
+      .textarea-field {
+        .error-txt {
+          top: -2rem;
+          position: relative;
+        }
+      }
+      button {
+        width: 100%;
       }
     }
-    .field.error .item {
-      border-color: #d93025;
-    }
-    .field.error .error-txt {
-      display: block;
-    }
-    button {
-      padding: 12px 32px;
-      background-color: #0ef;
-      border: none;
-      outline: none;
-      border-radius: 6px;
-      box-shadow: 0 0 10px #0ef;
-      font-size: 16px;
-      color: #333;
-      letter-spacing: 1px;
-      font-weight: 600;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: 0.5s;
-      &:hover {
-        box-shadow: none;
+    .area-image {
+      width: 100%;
+      max-width: 325px;
+      height: 100%;
+      margin-right: -10rem;
+      .image {
+        position: relative;
+        width: 100%;
+        height: 57rem;
+        img {
+          position: absolute;
+          &.lines {
+            width: 100%;
+            top: 0;
+            left: 0;
+          }
+          &.star-a {
+            width: 21.8rem;
+            height: 21.8rem;
+            top: 18rem;
+            left: 1rem;
+            animation: floating 4s infinite;
+          }
+          &.star-b {
+            width: 14rem;
+            height: 14rem;
+            top: 46rem;
+            left: -3rem;
+            animation: floating 6s infinite;
+          }
+        }
       }
     }
   }

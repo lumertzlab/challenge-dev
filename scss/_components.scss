@@ -1,3 +1,41 @@
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: $brand-blue;
+  animation: lift 0.8s ease-in-out;
+  animation-delay: 1.6s;
+  animation-fill-mode: forwards;
+  z-index: 99999;
+  .splash-screen__secondary {
+    @include flex(row, center, center);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: $brand-dark-gray;
+    animation: lift 0.8s ease-in-out;
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+    img {
+      width: 11.5rem;
+    }
+  }
+  @keyframes lift {
+    0% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      transform: translate3d(-100%, 0, 0);
+      opacity: 1;
+      visibility: hidden;
+    }
+  }
+}
+
 .accordion-item {
   background-color: $brand-light-gray;
   border: 1px solid $brand-dark-gray;
@@ -101,48 +139,5 @@
   }
   @include responsive(480px) {
     height: 25.3rem;
-  }
-}
-
-.splash-screen {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background: $brand-blue;
-  animation: lift 0.8s ease-in-out;
-  animation-delay: 1.6s;
-  animation-fill-mode: forwards;
-  z-index: 99999;
-  .splash-screen__secondary {
-    @include flex(row, center, center);
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: $brand-dark-gray;
-    animation: lift 0.8s ease-in-out;
-    animation-delay: 1.6s;
-    animation-fill-mode: forwards;
-    img {
-      width: 11.5rem;
-    }
-  }
-  @keyframes lift {
-    0% {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-      visibility: visible;
-    }
-    100% {
-      transform: translate3d(-100%, 0, 0);
-      opacity: 1;
-      visibility: hidden;
-    }
-  }
-  @include responsive(767px) {
-    .splash-screen__secondary {
-      img {
-        width: 200px;
-      }
-    }
   }
 }
