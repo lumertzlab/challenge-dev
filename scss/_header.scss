@@ -183,16 +183,15 @@ header {
       }
     }
   }
-  @include responsive(600px) {
-    .container,
-    .home-container {
-      .logo {
-        width: 13.7rem;
-        height: 2.5rem;
-      }
-    }
+  @include responsive(767px) {
+    padding: 3rem 0;
   }
-  @include responsive(480px) {
-    height: 7.3rem;
+  @include responsive(600px) {
+    .container {
+      @include flex(row, center, center);
+    }
+    .navTrigger {
+      display: none;
+    }
   }
 }

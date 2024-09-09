@@ -7,6 +7,9 @@
   font-weight: 400;
   line-height: 2.8rem;
   transition: all 0.3s;
+  @include responsive(600px) {
+    width: 100%;
+  }
 }
 
 .btn-primary {

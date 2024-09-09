@@ -1,7 +1,7 @@
 // HEADER SCROLL
 
-var className = "scroll-header";
-var scrollTrigger = 60;
+let className = "scroll-header";
+let scrollTrigger = 60;
 
 window.onscroll = function () {
   if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
@@ -56,7 +56,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
 
 // SLIDER
 
-var swiper = new Swiper(".slide-cards", {
+let swiper = new Swiper(".slide-cards", {
   slidesPerView: 3,
   spaceBetween: 32,
   navigation: {
@@ -68,17 +68,24 @@ var swiper = new Swiper(".slide-cards", {
     clickable: true,
   },
   breakpoints: {
-    320: {
-      slidesPerView: 1.3,
-      spaceBetween: 16,
-    },
-    600: {
-      slidesPerView: 2.3,
+    300: {
+      direction: "vertical",
+      height: "auto",
+      slidesPerView: 1.5,
       spaceBetween: 15,
     },
-    1050: {
+    600: {
+      direction: "horizontal",
+      slidesPerView: 1.5,
+      spaceBetween: 15,
+    },
+    767: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    1100: {
       slidesPerView: 3,
-      spaceBetween: 32,
+      spaceBetween: 40,
     },
   },
 });

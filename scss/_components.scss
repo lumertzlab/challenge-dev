@@ -38,8 +38,8 @@
 
 .accordion-item {
   background-color: $brand-light-gray;
-  border: 1px solid $brand-dark-gray;
-  border-bottom: 5px solid $brand-dark-gray;
+  border: 0.1rem solid $brand-dark-gray;
+  border-bottom: 0.5rem solid $brand-dark-gray;
   border-radius: 4.5rem;
   color: #111;
   margin-top: 3rem;
@@ -62,8 +62,8 @@
     &::after {
       content: "\002B";
       @include flex(row, center, center);
-      height: 58px;
-      width: 58px;
+      height: 5.8rem;
+      width: 5.8rem;
       font-size: 6rem;
       font-weight: 500;
       line-height: 0;
@@ -97,11 +97,71 @@
       margin: 3rem 0;
     }
   }
+  @include responsive(991px) {
+    padding: 3rem;
+    .accordion-item-header {
+      &::after {
+        content: "\002B";
+        @include flex(row, center, center);
+        height: 5rem;
+        width: 5rem;
+        font-size: 5rem;
+      }
+    }
+    .accordion-item-header-content {
+      span {
+        font-size: 5.2rem;
+      }
+    }
+  }
+  @include responsive(767px) {
+    &:first-of-type {
+      margin-top: 3rem;
+    }
+    margin-top: 2rem;
+    padding: 3rem;
+    .accordion-item-header {
+      &::after {
+        content: "\002B";
+        @include flex(row, center, center);
+        height: 4.2rem;
+        width: 4.2rem;
+        font-size: 5rem;
+      }
+    }
+    .accordion-item-header-content {
+      span {
+        font-size: 3.8rem;
+        margin-right: 3.3rem;
+      }
+      h3 {
+        font-size: 2.6rem;
+      }
+    }
+  }
+  @include responsive(600px) {
+    .accordion-item-header {
+      &::after {
+        content: "\002B";
+        @include flex(row, center, center);
+        height: 3rem;
+        width: 3rem;
+        font-size: 3rem;
+      }
+    }
+    .accordion-item-header-content {
+      span {
+        font-size: 3rem;
+      }
+      h3 {
+        font-size: 1.8rem;
+      }
+    }
+  }
 }
 
 .card-user {
   width: 100%;
-  max-width: 38.7rem;
   height: 100%;
   background-color: $brand-white;
   border: 0.1rem solid #191a23;
