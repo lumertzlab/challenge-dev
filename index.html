@@ -11,7 +11,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
-    <title>LP DEVS</title>
+
+    <!-- Primary Meta Tags -->
+    <title>LP DEVS - Desafio Desenvolvedor +A Educação</title>
+    <meta name="title" content="LP DEVS - Desafio Desenvolvedor +A Educação" />
+    <meta name="description" content="Página desenvolvida para o desafio técnico da vaga de desenvolvedor na +A Educação" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lumertzlab.github.io/challenge-dev/" />
+    <meta property="og:title" content="LP DEVS - Desafio Desenvolvedor +A Educação" />
+    <meta property="og:description" content="Página desenvolvida para o desafio técnico da vaga de desenvolvedor na +A Educação" />
+    <meta property="og:image" content="./assets/metatags.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://lumertzlab.github.io/challenge-dev/" />
+    <meta property="twitter:title" content="LP DEVS - Desafio Desenvolvedor +A Educação" />
+    <meta property="twitter:description" content="Página desenvolvida para o desafio técnico da vaga de desenvolvedor na +A Educação" />
+    <meta property="twitter:image" content="./assets/metatags.png" />
 </head>
 
 <body>
@@ -62,14 +80,14 @@
             </div>
             <div class="area-image">
                 <div class="image" data-aos="zoom-in">
-                    <img src="assets/illustration-orbit.png" class="orbit" alt="">
-                    <img src="assets/illustration-main.png" class="main" alt="">
-                    <img src="assets/illustration-stars.png" class="stars" alt="">
-                    <img src="assets/illustration-dots.png" class="dots" alt="">
-                    <img src="assets/illustration-circle-01.png" class="circle first" alt="">
-                    <img src="assets/illustration-circle-02.png" class="circle second" alt="">
-                    <img src="assets/illustration-circle-03.png" class="circle third" alt="">
-                    <img src="assets/illustration-circle-04.png" class="circle fourth" alt="">
+                    <img src="assets/illustration-orbit.svg" class="orbit" alt="">
+                    <img src="assets/illustration-main.svg" class="main" alt="">
+                    <img src="assets/illustration-stars.svg" class="stars" alt="">
+                    <img src="assets/illustration-dots.svg" class="dots" alt="">
+                    <img src="assets/illustration-circle-01.svg" class="circle first" alt="">
+                    <img src="assets/illustration-circle-02.svg" class="circle second" alt="">
+                    <img src="assets/illustration-circle-03.svg" class="circle third" alt="">
+                    <img src="assets/illustration-circle-04.svg" class="circle fourth" alt="">
                 </div>
             </div>
             <div class="text responsive" data-aos="fade-right">
@@ -246,7 +264,7 @@
                             <p>3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis</p>
                         </div>
                     </div>
-                    <div class="swiper-slide responsive">
+                    <div class="swiper-slide responsive" id="firstCard">
                         <div class="card-user">
                             <div class="user">
                                 <img class="user-profile" src="assets/img-card-01.png" alt="">
@@ -262,7 +280,7 @@
                             <p>10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy</p>
                         </div>
                     </div>
-                    <div class="swiper-slide responsive">
+                    <div class="swiper-slide responsive" id="secondCard">
                         <div class="card-user">
                             <div class="user">
                                 <img class="user-profile" src="assets/img-card-02.png" alt="">
@@ -278,7 +296,7 @@
                             <p>7+ years of experience in project management and team leadership. Strong organizational and communication skills</p>
                         </div>
                     </div>
-                    <div class="swiper-slide responsive">
+                    <div class="swiper-slide responsive" id="thirdCard">
                         <div class="card-user">
                             <div class="user">
                                 <img class="user-profile" src="assets/img-card-03.png" alt="">
@@ -302,7 +320,7 @@
                 <div class="swiper-button-next"></div>
             </div>
             <div class="btn-section">
-                <button class="btn-primary">See all</button>
+                <button class="btn-primary" onclick="showCards()">See all</button>
             </div>
         </div>
     </section>
@@ -319,13 +337,13 @@
                     <div class="input-box">
                         <div class="input-field field">
                             <p>Name</p>
-                            <input type="text" placeholder="Name" id="name" class="item" autocomplete="off">
-                            <div class="error-txt">Full Name can't be blank</div>
+                            <input type="text" placeholder="Name" id="name" class="item" autocomplete="off" pattern="[a-zA-Z]*">
+                            <div class="error-txt name">Name can't be blank</div>
                         </div>
                         <div class="input-field field">
                             <p>Email*</p>
                             <input type="text" placeholder="Email" id="email" class="item" autocomplete="off">
-                            <div class="error-txt email">Email Address can't be blank</div>
+                            <div class="error-txt email">Email can't be blank</div>
                         </div>
                     </div>
 
@@ -404,6 +422,25 @@
                         <li>
                             <p>Address: 1234 Main St</p>
                             <p>Moonstone City, Stardust State 12345</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="share">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="assets/linkedin.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="assets/facebook.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="assets/twitter-white.svg" alt="">
+                            </a>
                         </li>
                     </ul>
                 </div>

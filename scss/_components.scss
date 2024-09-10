@@ -197,7 +197,4 @@
   p {
     color: $brand-black;
   }
-  @include responsive(480px) {
-    height: 25.3rem;
-  }
 }

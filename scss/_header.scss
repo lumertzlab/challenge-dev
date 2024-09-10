@@ -109,7 +109,6 @@ header {
     }
   }
   @include responsive(991px) {
-    max-width: 100%;
     .navTrigger {
       @include flex(row, center, center);
     }
