@@ -30,5 +30,3 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
 O desafio proposto consitiu em desenvolver uma landing page seguindo o layout e padrão gráfico fornecido em um arquivo Figma. O propósito do teste era manter fielmente a estrutura proposta no arquivo, respeitando a responsividade e implementando um sistema de formulário de contato funcional e com validações.
-
-[Clique aqui para acessar o projeto finalizado e já no ar!](https://lumertzlab.github.io./project-personal-links/)

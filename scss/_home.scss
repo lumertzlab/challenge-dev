@@ -3,7 +3,11 @@
   min-height: 53rem;
   margin-top: 20.1rem;
   .container {
+    @include flex(column, flex-start, flex-start);
+  }
+  .mainDiv {
     @include flex(row, flex-start, space-between);
+    width: 100%;
   }
   .text {
     width: 100%;
@@ -30,31 +34,31 @@
     .image {
       position: relative;
       width: 100%;
-      height: 54rem;
+      height: 34.3rem;
       img {
         position: absolute;
       }
       .main {
-        top: 1rem;
+        top: 2rem;
         right: 21rem;
         max-width: 34rem;
         width: 100%;
       }
       .orbit {
-        bottom: 4.6rem;
+        bottom: -16.4rem;
         max-width: 56.5rem;
         width: 100%;
         animation: floating 8s infinite;
       }
       .stars {
-        bottom: 6rem;
+        bottom: -13rem;
         left: 6rem;
         max-width: 27.1rem;
         width: 100%;
         animation: floating 6s infinite;
       }
       .dots {
-        top: 4rem;
+        top: 5rem;
         left: 6rem;
         max-width: 37.3rem;
         width: 100%;
@@ -64,22 +68,22 @@
         max-width: 10.1rem;
         width: 100%;
         &.first {
-          top: -1rem;
+          top: 1rem;
           right: 21rem;
           animation: floating 6s infinite;
         }
         &.second {
-          top: 0rem;
+          top: 1rem;
           right: 12rem;
           animation: floating 8s infinite;
         }
         &.third {
-          top: 11rem;
+          top: 12rem;
           right: 12rem;
           animation: floating 7s infinite;
         }
         &.fourth {
-          top: 22rem;
+          top: 23rem;
           right: 13rem;
           animation: floating 9s infinite;
         }
@@ -91,73 +95,76 @@
       margin-right: -13rem;
     }
   }
-  @include responsive(1366px) {
+  @include responsive(1300px) {
     .area-image {
-      margin-right: -10rem;
       .image {
-        .main {
-          top: 4rem;
-          right: 23rem;
-          max-width: 30rem;
-        }
-        .orbit {
-          right: 18rem;
-          bottom: 7rem;
-          max-width: 48.5rem;
-        }
-        .stars {
-          bottom: 8rem;
-          left: 11rem;
-          max-width: 24rem;
-        }
-        .dots {
-          top: 7rem;
-          left: 9rem;
-          max-width: 32rem;
-        }
-        .circle {
-          max-width: 8rem;
-          &.first {
-            top: 4rem;
-            right: 22rem;
-          }
-          &.second {
-            top: 4rem;
-            right: 14rem;
-          }
-          &.third {
-            top: 13rem;
-            right: 15rem;
-          }
-          &.fourth {
-            top: 21rem;
-            right: 16rem;
-          }
-        }
+        height: 31rem;
       }
     }
   }
   @include responsive(1100px) {
     .area-image {
-      margin-right: -15rem;
       .image {
-        .stars {
-          bottom: 8rem;
-          left: 8rem;
+        .main {
+          top: 2rem;
+          right: 0;
+          left: -10rem;
+          margin: 0 auto;
           max-width: 24rem;
         }
+        .orbit {
+          top: 6rem;
+          bottom: initial;
+          right: 16rem;
+          left: 0;
+          margin: 0 auto;
+          max-width: 40rem;
+        }
+        .stars {
+          top: 24rem;
+          bottom: initial;
+          right: 27rem;
+          left: 0;
+          margin: 0 auto;
+          max-width: 17rem;
+        }
         .dots {
-          top: 5rem;
-          left: 6rem;
-          max-width: 32rem;
+          top: 4rem;
+          right: 24rem;
+          left: 0;
+          margin: 0 auto;
+          max-width: 25rem;
+        }
+        .circle {
+          max-width: 7rem;
+          &.first {
+            top: 2rem;
+            right: 23rem;
+          }
+          &.second {
+            top: 2rem;
+            right: 16rem;
+          }
+          &.third {
+            top: 10rem;
+            right: 17rem;
+          }
+          &.fourth {
+            top: 17rem;
+            right: 18rem;
+          }
         }
       }
     }
   }
   @include responsive(991px) {
+    margin-top: 17rem;
     min-height: 76.3rem;
     height: fit-content;
     .container {
+      @include flex(column, center, center);
+    }
+    .mainDiv {
       @include flex(column, center, center);
     }
     .text {
@@ -166,31 +173,19 @@
       h1 {
         text-align: center;
         max-width: 100%;
-        margin-bottom: 2.3rem;
+        margin-bottom: 0;
       }
-      p,
-      .btn-primary {
-        display: none;
-      }
-      &.responsive {
-        display: block;
-        @include flex(column, center, center);
-        p,
-        .btn-primary {
-          display: block;
-        }
-        p {
-          max-width: 100%;
-          text-align: center;
-          font-size: 1.8rem;
-        }
+      p {
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
       }
     }
     .area-image {
       margin-right: initial;
-      margin-bottom: 2.3rem;
       .image {
         height: 31rem;
+        margin: 5rem 0;
         .main {
           top: 3rem;
           right: 0;
@@ -204,7 +199,7 @@
           right: 7rem;
           left: 0;
           margin: 0 auto;
-          max-width: 34rem;
+          max-width: 35rem;
         }
         .stars {
           top: 21rem;
@@ -246,22 +241,110 @@
   @include responsive(767px) {
     margin-top: 14.3rem;
     .text {
-      &.responsive {
-        p {
-          font-size: 1.6rem;
-          line-height: 2.4rem;
+      p {
+        font-size: 1.6rem;
+        margin-bottom: 2.3rem;
+      }
+    }
+    .area-image {
+      .image {
+        .circle {
+          max-width: 7rem;
+          margin: 0 auto;
+          &.first {
+            top: 2rem;
+            right: -19rem;
+            left: 0;
+          }
+          &.second {
+            top: 3rem;
+            right: -33rem;
+            left: 0;
+          }
+          &.third {
+            top: 11rem;
+            right: -31rem;
+            left: 0;
+          }
+          &.fourth {
+            top: 18rem;
+            right: -29rem;
+            left: 0;
+          }
         }
       }
     }
   }
   @include responsive(600px) {
+    .area-image {
+      margin-right: -2rem;
+    }
     .text {
-      h1 {
+      h1,
+      p {
+        max-width: 100%;
         text-align: start;
       }
-      &.responsive {
-        p {
-          text-align: start;
+    }
+    .area-image {
+      .image {
+        margin: 2rem 0;
+      }
+    }
+  }
+  @include responsive(480px) {
+    .area-image {
+      .image {
+        .main {
+          top: 4rem;
+          right: 2rem;
+          left: 0;
+          margin: 0 auto;
+          max-width: 17.5rem;
+        }
+        .orbit {
+          top: 6rem;
+          right: 7rem;
+          left: 0;
+          margin: 0 auto;
+          max-width: 30rem;
+        }
+        .stars {
+          top: 19rem;
+          right: 16rem;
+          left: 0;
+          margin: 0 auto;
+          max-width: 14.3rem;
+        }
+        .dots {
+          top: 5rem;
+          right: 13rem;
+          left: 0;
+          margin: 0 auto;
+          max-width: 18.3rem;
+        }
+        .circle {
+          max-width: 6rem;
+          &.first {
+            top: 3rem;
+            right: -14rem;
+            left: 0;
+          }
+          &.second {
+            top: 3rem;
+            right: -26rem;
+            left: 0;
+          }
+          &.third {
+            top: 10rem;
+            right: -24rem;
+            left: 0;
+          }
+          &.fourth {
+            top: 16rem;
+            right: -22rem;
+            left: 0;
+          }
         }
       }
     }
@@ -300,7 +383,7 @@
 }
 
 .s-cards {
-  padding-top: 12.7rem;
+  padding-top: 8.6rem;
   .text {
     width: 100%;
     h2 {
@@ -386,15 +469,12 @@
       }
     }
     .slide-cards {
-      margin-top: 3rem;
+      margin-top: 4rem;
       .swiper-wrapper {
         @include flex(column, center, center);
       }
       .swiper-slide {
         margin-bottom: 3rem;
-        &:last-of-type {
-          margin-bottom: 0;
-        }
         &.responsive {
           display: none;
         }
@@ -404,7 +484,7 @@
       display: none;
     }
     .btn-section {
-      margin-top: 3.9rem;
+      margin-top: 0.9rem;
       display: block;
     }
   }
@@ -454,9 +534,9 @@
         .item {
           width: 100%;
           height: 5.9rem;
-          padding: 18px 30px;
+          padding: 1.8rem 3rem;
           background: $brand-white;
-          border: 1px solid $brand-black;
+          border: 0.1rem solid $brand-black;
           outline: none;
           border-radius: 1.4rem;
           font-size: 1.8rem;
@@ -465,7 +545,7 @@
           margin-bottom: 2.5rem;
           resize: none;
           &::placeholder {
-            color: #898989;
+            color: $gray-100;
           }
           &.message {
             height: 19rem;
@@ -474,25 +554,28 @@
         }
         p {
           font-size: 1.6rem;
-          line-height: 2.8rem;
           width: fit-content;
           margin-bottom: 0.5rem;
           color: $brand-black;
         }
         .error-txt {
           font-size: 1.45rem;
-          color: #d93025;
+          color: $red-error;
           text-align: left;
           margin: -2rem 0 1rem;
           display: none;
         }
         &.error {
           .item {
-            border-color: #d93025;
+            border-color: $red-error;
           }
           .error-txt {
             display: block;
           }
+        }
+        &.subject,
+        &.phone {
+          display: none;
         }
       }
       .textarea-field {
@@ -543,7 +626,7 @@
   }
   @include responsive(800px) {
     .contact {
-      padding: 5rem 3rem;
+      padding: 4rem 3rem;
       form {
         max-width: 100%;
       }
@@ -577,7 +660,7 @@
           .item {
             margin-bottom: 2rem;
             font-size: 1.6rem;
-            padding: 18px 20px;
+            padding: 1.8rem 2rem;
             &.message {
               margin-bottom: 4.6rem;
             }
@@ -593,7 +676,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-1.5rem);
   }
   100% {
     transform: translateY(0);

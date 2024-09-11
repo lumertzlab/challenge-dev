@@ -115,6 +115,8 @@ button.addEventListener("click", function () {
 const form = document.querySelector("form");
 const fullName = document.getElementById("name");
 const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const subject = document.getElementById("subject");
 const mess = document.getElementById("message");
 
 function sendEmail() {
@@ -124,6 +126,7 @@ function sendEmail() {
     SecureToken: "4cc6db65-6de5-4fb7-986c-25a7f51d6f6f",
     To: "lumertz2001@gmail.com",
     From: "lumertz2001@gmail.com",
+    Subject: subject.value,
     Body: bodyMessage,
   }).then((message) => {
     if (message == "OK") {
@@ -144,7 +147,6 @@ function sendEmail() {
 
 function checkInputs() {
   const items = document.querySelectorAll(".item");
-  const errorTxtName = document.querySelector(".error-txt.name");
 
   for (const item of items) {
     if (item.value == "") {
@@ -152,10 +154,13 @@ function checkInputs() {
       item.parentElement.classList.add("error");
     }
 
-    if (items[0].value.length <= 3) {
-      item.classList.add("error");
-      errorTxtName.innerText = "Invalid name length";
+    if (items[0].value != "") {
+      checkName();
     }
+
+    items[0].addEventListener("keyup", () => {
+      checkName();
+    });
 
     if (items[1].value != "") {
       checkEmail();
@@ -174,6 +179,29 @@ function checkInputs() {
         item.parentElement.classList.add("error");
       }
     });
+  }
+}
+
+function checkName() {
+  const nameRegex = /[a-zA-Z ]*/;
+  const errorTxtName = document.querySelector(".error-txt.name");
+
+  if (!fullName.value.match(nameRegex)) {
+    fullName.classList.add("error");
+    fullName.parentElement.classList.add("error");
+
+    if (fullName.value != "") {
+      errorTxtName.innerText = "Enter a valid name";
+    } else {
+      errorTxtName.innerText = "Name field can't be blank";
+    }
+  } else if (fullName.value.length <= 3) {
+    fullName.classList.add("error");
+    fullName.parentElement.classList.add("error");
+    errorTxtName.innerText = "Invalid name length";
+  } else {
+    fullName.classList.remove("error");
+    fullName.parentElement.classList.remove("error");
   }
 }
 
@@ -203,6 +231,8 @@ form.addEventListener("submit", (e) => {
   if (
     !fullName.classList.contains("error") &&
     !email.classList.contains("error") &&
+    phone.classList.contains("error") &&
+    subject.classList.contains("error") &&
     !mess.classList.contains("error")
   ) {
     sendEmail();

@@ -7,6 +7,10 @@
   border: none;
   box-sizing: border-box;
   font-family: "Space Grotesk", sans-serif;
+  &::selection {
+    background-color: $brand-blue;
+    color: #fff;
+  }
 }
 
 img {

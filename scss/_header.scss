@@ -12,8 +12,6 @@ header {
     position: relative;
     @include flex(row, center, space-between);
     .logo {
-      background-image: url("../assets/logo-black.svg");
-      background-size: cover;
       width: 6.7rem;
       height: 5rem;
     }
@@ -36,7 +34,7 @@ header {
         position: relative;
         width: 100%;
         height: 0.2rem;
-        background: #000000;
+        background: $brand-black;
         transition: 0.5s;
       }
     }
@@ -68,13 +66,25 @@ header {
           margin-right: 4rem;
         }
         a {
+          position: relative;
           color: $brand-black;
           font-size: 2rem;
           font-weight: 400;
           line-height: 2.8rem;
-          transition: color 0.3s;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0.1rem;
+            background-color: $brand-black;
+            transition: all 0.3s ease;
+          }
           &:hover {
-            color: $brand-dark-gray;
+            &::after {
+              width: 100%;
+            }
           }
         }
       }
@@ -82,40 +92,12 @@ header {
   }
   &.scroll-header {
     padding: 2rem 0;
-    background-color: $brand-dark-gray;
-    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.12);
-    .container {
-      .logo {
-        background-image: url("../assets/logo-white.svg");
-      }
-    }
-    .navTrigger {
-      .menu__button {
-        span {
-          background: $brand-white;
-        }
-      }
-    }
+    background-color: $brand-light-gray;
+    border-bottom: 0.1rem solid #d5d5d5;
+    box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.12);
     .navMenu {
       ul {
-        background-color: $brand-dark-gray;
-        li {
-          a {
-            color: $brand-white;
-            &:hover {
-              background-color: #3f4044;
-            }
-          }
-        }
-      }
-    }
-    .btn-secondary {
-      border: 0.1rem solid $brand-white;
-      color: $brand-white;
-      &:hover {
-        border: 0.1rem solid $brand-white;
-        background-color: $brand-white;
-        color: $brand-dark-gray;
+        background-color: $brand-light-gray;
       }
     }
   }
@@ -165,7 +147,6 @@ header {
           a {
             position: relative;
             display: block;
-            color: #496173;
             font-size: 1.4rem;
             transition: 0.25s;
             line-height: 1;
@@ -178,7 +159,7 @@ header {
             border: 0.1rem solid $gray-100;
             border-radius: 0.4rem;
             &:hover {
-              background-color: #efefef;
+              background-color: $brand-white;
             }
           }
         }

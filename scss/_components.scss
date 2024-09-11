@@ -41,7 +41,6 @@
   border: 0.1rem solid $brand-dark-gray;
   border-bottom: 0.5rem solid $brand-dark-gray;
   border-radius: 4.5rem;
-  color: #111;
   margin-top: 3rem;
   padding: 4.1rem 6rem;
   transition: background-color 0.2s linear;
@@ -68,7 +67,7 @@
       font-weight: 500;
       line-height: 0;
       border-radius: 50rem;
-      border: 1px solid #000000;
+      border: 0.1rem solid $brand-black;
     }
   }
   .accordion-item-header-content {
@@ -95,6 +94,9 @@
       height: 0.1rem;
       background-color: $brand-black;
       margin: 3rem 0;
+    }
+    p {
+      color: $brand-black;
     }
   }
   @include responsive(991px) {
@@ -164,8 +166,8 @@
   width: 100%;
   height: 100%;
   background-color: $brand-white;
-  border: 0.1rem solid #191a23;
-  border-bottom: 0.5rem solid #191a23;
+  border: 0.1rem solid $brand-dark-gray;
+  border-bottom: 0.5rem solid $brand-dark-gray;
   border-radius: 4.5rem;
   padding: 4rem 3.5rem;
   .user {
@@ -178,7 +180,7 @@
     .user-infos {
       @include flex(column, flex-end, space-between);
       width: 100%;
-      height: 102px;
+      height: 10.2rem;
       img {
         width: 3.4rem;
         height: 3.4rem;
@@ -189,12 +191,21 @@
     }
   }
   .separation {
-    height: 1px;
+    height: 0.1rem;
     width: 100%;
-    background-color: #000000;
-    margin: 28px 0;
+    background-color: $brand-black;
+    margin: 2.8rem 0;
   }
+  h4,
   p {
     color: $brand-black;
+  }
+  h4 {
+    margin-bottom: 0.3rem;
+  }
+  @include responsive(600px) {
+    .separation {
+      margin: 2rem 0;
+    }
   }
 }

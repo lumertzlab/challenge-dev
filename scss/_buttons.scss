@@ -7,6 +7,8 @@
   font-weight: 400;
   line-height: 2.8rem;
   transition: all 0.3s;
+  text-align: center;
+  cursor: pointer;
   @include responsive(600px) {
     width: 100%;
   }
@@ -14,7 +16,7 @@
 
 .btn-primary {
   background-color: $brand-dark-gray;
-  border: 1px solid $brand-dark-gray;
+  border: 0.1rem solid $brand-dark-gray;
   color: $brand-white;
   &:hover {
     background-color: transparent;
@@ -24,7 +26,7 @@
 
 .btn-secondary {
   background-color: transparent;
-  border: 1px solid $brand-dark-gray;
+  border: 0.1rem solid $brand-dark-gray;
   color: $brand-black;
   &:hover {
     background-color: $brand-dark-gray;

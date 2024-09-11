@@ -16,10 +16,12 @@ Melhorias que poderiam ser realizadas caso houvesse mais tempo para a entrega do
 
 - Tornaria a estilização da ilustração da section hero um pouco mais precisa e organizada
 - Desenvolveria um pouco mais o menu hamburguer implementado
+- Buscaria outras regras de validações para o formulário
+- Implementaria um SEO mais robusto
 
 ---
 
 ## Requisitos obrigatórios não entregues
 
 Requisitos obrigatórios para o desafio que não foram entregues:
-Acredito que todos os requisitos foram respeitados.
+Acredito que todos os requisitos obrigatórios foram respeitados e entregues no desenvolvimento do projeto.
