@@ -199,13 +199,15 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="slide-cards" data-aos="fade-up">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper" id="swiperSec">
                     <div class="swiper-slide">
                         <div class="card-user">
                             <div class="user">
                                 <img class="user-profile" src="assets/img-card-01.png" alt="">
                                 <div class="user-infos">
-                                    <img src="assets/linkedin-icon.svg" alt="">
+                                    <a href="">
+                                        <img src="assets/linkedin-icon.svg" alt="">
+                                    </a>
                                     <div class="text-info">
                                         <h4>John Smith</h4>
                                         <p>CEO and Founder</p>
@@ -221,7 +223,9 @@
                             <div class="user">
                                 <img class="user-profile" src="assets/img-card-02.png" alt="">
                                 <div class="user-infos">
-                                    <img src="assets/linkedin-icon.svg" alt="">
+                                    <a href="">
+                                        <img src="assets/linkedin-icon.svg" alt="">
+                                    </a>
                                     <div class="text-info">
                                         <h4>Jane Doe</h4>
                                         <p>Director of Operations</p>
@@ -237,7 +241,9 @@
                             <div class="user">
                                 <img class="user-profile" src="assets/img-card-03.png" alt="">
                                 <div class="user-infos">
-                                    <img src="assets/linkedin-icon.svg" alt="">
+                                    <a href="">
+                                        <img src="assets/linkedin-icon.svg" alt="">
+                                    </a>
                                     <div class="text-info">
                                         <h4>Michael Brown</h4>
                                         <p>Senior SEO Specialist</p>
@@ -253,7 +259,9 @@
                             <div class="user">
                                 <img class="user-profile" src="assets/img-card-04.png" alt="">
                                 <div class="user-infos">
-                                    <img src="assets/linkedin-icon.svg" alt="">
+                                    <a href="">
+                                        <img src="assets/linkedin-icon.svg" alt="">
+                                    </a>
                                     <div class="text-info">
                                         <h4>Emily Johnson</h4>
                                         <p>PPC Manager</p>
@@ -264,12 +272,14 @@
                             <p>3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis</p>
                         </div>
                     </div>
-                    <div class="swiper-slide responsive" id="firstCard">
+                    <div class="swiper-slide responsive">
                         <div class="card-user">
                             <div class="user">
                                 <img class="user-profile" src="assets/img-card-01.png" alt="">
                                 <div class="user-infos">
-                                    <img src="assets/linkedin-icon.svg" alt="">
+                                    <a href="">
+                                        <img src="assets/linkedin-icon.svg" alt="">
+                                    </a>
                                     <div class="text-info">
                                         <h4>John Smith</h4>
                                         <p>CEO and Founder</p>
@@ -280,12 +290,14 @@
                             <p>10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy</p>
                         </div>
                     </div>
-                    <div class="swiper-slide responsive" id="secondCard">
+                    <div class="swiper-slide responsive">
                         <div class="card-user">
                             <div class="user">
                                 <img class="user-profile" src="assets/img-card-02.png" alt="">
                                 <div class="user-infos">
-                                    <img src="assets/linkedin-icon.svg" alt="">
+                                    <a href="">
+                                        <img src="assets/linkedin-icon.svg" alt="">
+                                    </a>
                                     <div class="text-info">
                                         <h4>Jane Doe</h4>
                                         <p>Director of Operations</p>
@@ -296,12 +308,14 @@
                             <p>7+ years of experience in project management and team leadership. Strong organizational and communication skills</p>
                         </div>
                     </div>
-                    <div class="swiper-slide responsive" id="thirdCard">
+                    <div class="swiper-slide responsive">
                         <div class="card-user">
                             <div class="user">
                                 <img class="user-profile" src="assets/img-card-03.png" alt="">
                                 <div class="user-infos">
-                                    <img src="assets/linkedin-icon.svg" alt="">
+                                    <a href="">
+                                        <img src="assets/linkedin-icon.svg" alt="">
+                                    </a>
                                     <div class="text-info">
                                         <h4>Michael Brown</h4>
                                         <p>Senior SEO Specialist</p>
@@ -320,7 +334,7 @@
                 <div class="swiper-button-next"></div>
             </div>
             <div class="btn-section">
-                <button class="btn-primary" onclick="showCards()">See all</button>
+                <button class="btn-primary" id="btnCards">See all</button>
             </div>
         </div>
     </section>
@@ -447,7 +461,7 @@
             </div>
             <div class="msg">
                 <p>© 2023 Positivus. All Rights Reserved.</p>
-                <p>Privacy Policy</p>
+                <p><a href="#privacy">Privacy Policy</a></p>
             </div>
         </div>
     </footer>

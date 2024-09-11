@@ -27,8 +27,6 @@ const accordionItemHeaders = document.querySelectorAll(".accordion-item");
 
 accordionItemHeaders.forEach((accordionItemHeader) => {
   accordionItemHeader.addEventListener("click", (event) => {
-    // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
-
     const currentlyActiveAccordionItemHeader = document.querySelector(
       ".accordion-item.active"
     );
@@ -69,13 +67,12 @@ let swiper = new Swiper(".slide-cards", {
   },
   breakpoints: {
     300: {
-      direction: "vertical",
-      height: "auto",
-      slidesPerView: 1.5,
-      spaceBetween: 30,
+      enabled: false,
+      slidesPerView: 1,
+      spaceBetween: 0,
     },
     600: {
-      direction: "horizontal",
+      enabled: true,
       slidesPerView: 1.5,
       spaceBetween: 15,
     },
@@ -90,10 +87,28 @@ let swiper = new Swiper(".slide-cards", {
   },
 });
 
-function showCards() {
-  var element = document.getElementById("secondCard");
-  element.classList.toggle("responsive");
-}
+let firstCard = document.querySelector("#swiperSec div:nth-child(5)");
+let secondCard = document.querySelector("#swiperSec div:nth-child(6)");
+let thirdCard = document.querySelector("#swiperSec div:nth-child(7)");
+let button = document.getElementById("btnCards");
+
+button.addEventListener("click", function () {
+  if (
+    firstCard.classList.contains("responsive") &&
+    secondCard.classList.contains("responsive") &&
+    thirdCard.classList.contains("responsive")
+  ) {
+    firstCard.classList.remove("responsive");
+    secondCard.classList.remove("responsive");
+    thirdCard.classList.remove("responsive");
+    button.innerHTML = "Show less";
+  } else {
+    firstCard.classList.add("responsive");
+    secondCard.classList.add("responsive");
+    thirdCard.classList.add("responsive");
+    button.innerHTML = "See all";
+  }
+});
 
 // CONTACT FORM
 

@@ -387,7 +387,14 @@
     }
     .slide-cards {
       margin-top: 3rem;
+      .swiper-wrapper {
+        @include flex(column, center, center);
+      }
       .swiper-slide {
+        margin-bottom: 3rem;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
         &.responsive {
           display: none;
         }
@@ -397,7 +404,7 @@
       display: none;
     }
     .btn-section {
-      margin-top: 1rem;
+      margin-top: 3.9rem;
       display: block;
     }
   }

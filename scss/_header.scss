@@ -89,11 +89,22 @@ header {
         background-image: url("../assets/logo-white.svg");
       }
     }
+    .navTrigger {
+      .menu__button {
+        span {
+          background: $brand-white;
+        }
+      }
+    }
     .navMenu {
       ul {
+        background-color: $brand-dark-gray;
         li {
           a {
             color: $brand-white;
+            &:hover {
+              background-color: #3f4044;
+            }
           }
         }
       }
@@ -115,7 +126,7 @@ header {
     .navMenu {
       position: absolute;
       top: 6rem;
-      right: 1.5rem;
+      right: 1rem;
       text-align: center;
       opacity: 0;
       z-index: -1;
@@ -178,7 +189,7 @@ header {
     }
     &.scroll-header {
       .navMenu {
-        top: 9rem;
+        top: 8rem;
       }
     }
   }
